@@ -4,7 +4,7 @@ const NavBar = () => {
     return (
         <header >
             <nav className="allNav">
-                <h1>Ecommerce</h1>
+                <h1 className="logoNav">Logo de mi E-commerce 🪴</h1>
                 <div>
                     <button>Boton 1</button>
                     <button>Boton 2</button>

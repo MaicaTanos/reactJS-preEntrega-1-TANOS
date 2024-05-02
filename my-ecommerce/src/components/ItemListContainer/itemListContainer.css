@@ -1,0 +1,15 @@
+.contenedor{
+    display: grid;
+    place-items: center;
+    margin-top: 5vw;
+}
+
+.divGreeting{
+    background-color: aquamarine;
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
