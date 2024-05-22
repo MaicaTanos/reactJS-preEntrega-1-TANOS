@@ -32,7 +32,7 @@ const productos = [
 
 
 export const getProductos = () => {
-  return new promise ((resolve) => {
+  return new Promise ((resolve) => {
     setTimeout(() => {
       resolve(productos)
     }, 1000)
@@ -40,10 +40,18 @@ export const getProductos = () => {
 }
 
 export const getIdProductos = (productosId) => {
-  return new promise((resolve) => {
+  return new Promise((resolve) => {
     setTimeout(() =>{
       resolve(productos.find(prod => prod.id === productosId))
     }, 1000)
+  })
+}
+
+export const getProdCategoria = (productosCategoria) => {
+  return new Promise((resolve) => {
+      setTimeout(() =>{
+        resolve(productos.find(prod => prod.categoria === productosCategoria))
+      }, 1000)
   })
 }
 

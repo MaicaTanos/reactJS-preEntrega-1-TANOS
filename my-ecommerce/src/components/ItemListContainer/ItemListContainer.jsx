@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './itemListContainer.css'
-import { getProductos, getProductoCategoria } from '../../assyncMock'
+import { getProductos, getProdCategoria } from '../../assyncMock'
 import {useParams} from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
 
@@ -10,7 +10,7 @@ const ItemListContainer = ({greeting}) => {
     const {categoriaId} = useParams()
 
     useEffect(() => {
-        const asyncFunc =categoriaId ? getProductoCategoria : getProductos
+        const asyncFunc =categoriaId ? getProdCategoria : getProductos
 
         asyncFunc(categoriaId)
         .then(response => {
@@ -20,18 +20,6 @@ const ItemListContainer = ({greeting}) => {
             console.error(error)
         })
     }, [categoriaId])
-
-
-    useEffect(() => {
-        getProductos()
-        .then(response => {
-            setProductos(response)
-        })
-        .catch(error => {
-            console.error(error)
-        })
-    }, [])
-
 
     return(
         <section className='contenedor'>
