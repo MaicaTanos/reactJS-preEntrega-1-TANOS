@@ -6,7 +6,7 @@ const NavBar = () => {
         <header >
             <nav className="allNav">
                 <div>
-                    <img src="../img/Vida en maceta PLANT shop LOGO" alt="" />
+                    <img src="../img/Vida en maceta PLANT shop LOGO.png" alt="Logo Vida en maceta" />
                 </div>
                 <div>
                     <NavLink to={`/categoria/plantas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Plantas</NavLink>
